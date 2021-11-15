@@ -18,7 +18,7 @@ pipeline {
         stage('Test') {
             steps {
               // run pytest
-              sh "python3 -m pytest --cov=application --cov-report term-missing --cov-report xml:coverage.xml --junitxml=junit_report2.xml
+              sh "python3 -m pytest --cov=application --cov-report term-missing --cov-report xml:coverage.xml --junitxml=junit_report2.xml"
             }
         }
         stage('Deploy') {
