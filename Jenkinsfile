@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
               // run create.py to create schema
-              sh "if [CREATE_SCHEMA == "true"] then python3 create.py fi"
+              sh "if [CREATE_SCHEMA == 'true'] then python3 create.py fi"
               // run the app
               sh "python3 app.py"
             }
